@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
@@ -7,9 +8,7 @@ import PopUser from './components/PopUser/PopUser';
 
 function App() {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-}
 
-function App() {
   return (
     <div className="wrapper">
       <Header toggleMenu={() => setIsUserMenuOpen(!isUserMenuOpen)} />
