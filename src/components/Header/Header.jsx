@@ -1,6 +1,4 @@
-import PopUser from '../PopUser/PopUser';
-
-function Header() {
+function Header({ toggleMenu }) {
   return (
     <header className="header">
       <div className="container">
@@ -12,9 +10,12 @@ function Header() {
             <a href="" target="_self"><img src="images/logo_dark.png" alt="logo" /></a>
           </div>
           <nav className="header__nav">
-            <button className="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
-            <a href="#user-set-target" className="header__user _hover02">Ivan Ivanov</a>
-            <PopUser /> 
+            <button className="header__btn-main-new _hover01" id="btnMainNew">
+              <a href="#popNewCard">Создать новую задачу</a>
+            </button>
+            <button onClick={toggleMenu} className="header__user _hover02">
+              Ivan Ivanov
+            </button>
           </nav>
         </div>
       </div>
