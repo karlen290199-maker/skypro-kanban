@@ -1,5 +1,3 @@
-import PopUser from '../PopUser/PopUser';
-
 function Header({ toggleMenu }) {
   return (
     <header className="header">
@@ -15,12 +13,9 @@ function Header({ toggleMenu }) {
             <button className="header__btn-main-new _hover01" id="btnMainNew">
               <a href="#popNewCard">Создать новую задачу</a>
             </button>
-
             <button onClick={toggleMenu} className="header__user _hover02">
               Ivan Ivanov
             </button>
-            
-            <PopUser /> 
           </nav>
         </div>
       </div>
