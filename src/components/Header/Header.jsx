@@ -1,25 +1,35 @@
+import {
+  HeaderBlock,
+  HeaderContainer,
+  HeaderLogo,
+  HeaderNav,
+  HeaderBtnMainNew,
+  HeaderUser
+} from './Header.styled';
+
 function Header({ toggleMenu }) {
   return (
-    <header className="header">
+    <HeaderBlock>
       <div className="container">
-        <div className="header__block">
-          <div className="header__logo _show _light">
+        <HeaderContainer>
+          <HeaderLogo className="_show _light">
             <a href="" target="_self"><img src="images/logo.png" alt="logo" /></a>
-          </div>
-          <div className="header__logo _dark">
+          </HeaderLogo>
+          <HeaderLogo className="_dark">
             <a href="" target="_self"><img src="images/logo_dark.png" alt="logo" /></a>
-          </div>
-          <nav className="header__nav">
-            <button className="header__btn-main-new _hover01" id="btnMainNew">
+          </HeaderLogo>
+          <HeaderNav>
+            <HeaderBtnMainNew id="btnMainNew">
               <a href="#popNewCard">Создать новую задачу</a>
-            </button>
-            <button onClick={toggleMenu} className="header__user _hover02">
+            </HeaderBtnMainNew>
+
+            <HeaderUser onClick={toggleMenu}>
               Ivan Ivanov
-            </button>
-          </nav>
-        </div>
+            </HeaderUser>
+          </HeaderNav>
+        </HeaderContainer>
       </div>
-    </header>
+    </HeaderBlock>
   );
 }
 
