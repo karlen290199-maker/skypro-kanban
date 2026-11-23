@@ -195,4 +195,51 @@ export const GlobalStyle = createGlobalStyle`
   .status__themes { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: flex-start; }
   .status__theme { border-radius: 24px; border: 0.7px solid rgba(148, 166, 190, 0.4); color: #94A6BE; padding: 11px 14px 10px; margin-right: 7px; margin-bottom: 7px; }
   .status__theme p { font-size: 14px; line-height: 1; letter-spacing: -0.14px; }
+
+  @media screen and (max-width: 1200px) {
+    /* Медиа-запросы для Main убраны, так как стили перенесены в Main.styled.js */
+  }
+  @media screen and (max-width: 660px) {
+    .pop-new-card { top: 70px; }
+    .pop-new-card__container { padding: 0; justify-content: flex-start; }
+    .pop-new-card__block { border-radius: 0; }
+    .pop-new-card__wrap { display: block; }
+    .calendar { max-width: 340px; width: 100%; }
+    .calendar__ttl, .calendar__nav, .calendar__period { padding: 0; }
+    .calendar .date-create { display: none; margin-bottom: 7px; }
+    .calendar__p { font-size: 14px; }
+    .calendar__day-name { font-size: 14px; }
+    .calendar__cells { width: 344px; height: auto; display: flex; flex-wrap: wrap; justify-content: space-around; }
+    .calendar__cell { width: 42px; height: 42px; font-size: 14px; }
+    .pop-browse { top: 70px; }
+    .pop-browse__container { padding: 0; justify-content: flex-start; }
+    .pop-browse__block { border-radius: 0; }
+    .pop-browse__wrap { display: block; }
+  }
+  @media screen and (max-width: 495px) {
+    .container { width: 100%; padding: 0 16px; }
+    .header__btn-main-new { z-index: 3; position: fixed; left: 16px; bottom: 30px; top: auto; width: calc(100vw - 32px); height: 40px; border-radius: 4px; margin-right: 0; }
+    .pop-new-card__container { padding: 0; justify-content: flex-start; }
+    .pop-new-card__block { padding: 20px 16px 32px; }
+    .pop-new-card__form { max-width: 100%; width: 100%; display: block; }
+    .pop-new-card__calendar { width: 100%; }
+    .form-new__area { max-width: 100%; height: 34px; }
+    .form-new__create { width: 100%; height: 40px; }
+    .pop-browse__block { padding: 20px 16px 32px; }
+    .pop-browse__content .theme-down { display: block; margin-bottom: 20px; }
+    .pop-browse__content .theme-top { display: none; }
+    .pop-browse__form { max-width: 100%; }
+    .pop-browse__calendar { width: 100%; }
+    .pop-browse__btn-browse button, .pop-browse__btn-edit button { width: 100%; height: 40px; }
+    .pop-browse__btn-browse .btn-group, .pop-browse__btn-edit .btn-group { width: 100%; }
+    .pop-browse__btn-browse .btn-group button, .pop-browse__btn-edit .btn-group button { margin-right: 0px; }
+    .form-browse__area { max-width: 100%; }
+    .form-browse__area { height: 37px; }
+  }
+  @media only screen and (max-width: 375px) {
+    .pop-exit__block { padding: 50px 20px; }
+    .pop-exit__exit-yes { width: 100%; height: 40px; margin-right: 0; margin-bottom: 10px; }
+    .pop-exit__exit-no { width: 100%; height: 40px; }
+    .pop-exit__form-group { display: block; }
+  }
 `;

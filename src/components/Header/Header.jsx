@@ -1,3 +1,4 @@
+import PopUser from '../PopUser/PopUser';
 import {
   HeaderBlock,
   HeaderContainer,
@@ -7,7 +8,7 @@ import {
   HeaderUser
 } from './Header.styled';
 
-function Header({ toggleMenu }) {
+function Header({ toggleMenu, isOpen }) {
   return (
     <HeaderBlock>
       <div className="container">
@@ -26,6 +27,8 @@ function Header({ toggleMenu }) {
             <HeaderUser onClick={toggleMenu}>
               Ivan Ivanov
             </HeaderUser>
+
+            <PopUser isOpen={isOpen} />
           </HeaderNav>
         </HeaderContainer>
       </div>
